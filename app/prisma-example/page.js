@@ -1,12 +1,6 @@
 import prisma from '@/utils/db';
 
 const prismaHandlers = async () => {
-  console.log('prisma example run');
-  // await prisma.task.create({
-  //   data: {
-  //     content: 'wake up',
-  //   },
-  // });
   const allTasks = await prisma.task.findMany({
     orderBy: {
       createdAt: 'desc',
